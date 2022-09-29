@@ -1,6 +1,5 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import { SearchContext } from "../context/Search";
@@ -48,6 +47,7 @@ const Home: NextPage<HomeProps> = ({ trending }) => {
                       src={images.fixed_height.url}
                       width={images.fixed_height.width}
                       height={images.fixed_height.height}
+                      alt={images.fixed_height.url}
                     />
                   );
                 })}
@@ -67,6 +67,7 @@ const Home: NextPage<HomeProps> = ({ trending }) => {
                       src={images.fixed_height.url}
                       width={images.fixed_height.width}
                       height={images.fixed_height.height}
+                      alt={images.fixed_height.url}
                     />
                   );
                 })}

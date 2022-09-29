@@ -7,5 +7,8 @@ interface ISearchContext {
 
 export const SearchContext = createContext<ISearchContext>({
   search: "",
-  setSearch: () => {},
+  setSearch: () => {
+    1; // Prevent eslint from yelling at me
+    return;
+  },
 });
