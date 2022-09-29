@@ -36,7 +36,7 @@ const Home: NextPage<HomeProps> = ({ trending }) => {
           <SearchBar />
           {search === "" && (
             <div className="text-white mt-10">
-              <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-800 font-extrabold text-2xl text-center w-full mb-8">
+              <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-800 font-extrabold md:text-2xl text-lg text-center w-full mb-8">
                 Hottest GIFs of the Day
               </h1>
               <div className="flex flex-wrap justify-center items-center">
@@ -81,7 +81,7 @@ const Home: NextPage<HomeProps> = ({ trending }) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const res = await fetch(
-    `https://api.giphy.com/v1/gifs/trending?api_key=${process.env.NEXT_PUBLIC_GIPHY_API_TOKEN}&limit=30&rating=pg-13`
+    `https://api.giphy.com/v1/gifs/trending?api_key=${process.env.NEXT_PUBLIC_GIPHY_API_TOKEN}&limit=25&rating=pg-13`
   );
   const data = await res.json();
 
