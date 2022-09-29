@@ -1,12 +1,12 @@
 import "../styles/globals.css";
 import type { AppType } from "next/dist/shared/lib/utils";
-import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className="bg-stone-900 w-full h-[100vh]">
-      <Navbar />
+    <div className="border-4  border-purple-600 w-full">
       <Component {...pageProps} />;
+      <Footer />
     </div>
   );
 };
